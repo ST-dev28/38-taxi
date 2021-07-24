@@ -2,31 +2,26 @@ class Taxi {
     constructor (personName) {
     this.personName = personName;
     this.kmPrice = 100;
-    this.price = 0;
+    this.distance = 0;
+    this.priceTotal = 0;
     }
 
     intro() {
-        const pricePerKm = (this.kmPrice / 100).toFixed(2);
-        this.pricePerKm = pricePerKm;
-        console.log(`Sveiki, as ${this.personName} ir kilometro kaina su manimi yra ${pricePerKm} Eur.`);
+        console.log(`Sveiki, as ${this.personName} ir kilometro kaina su manimi yra ${(this.kmPrice / 100).toFixed(2)} Eur.`);
     }
 
     updatePrice(newPrice) {
-            this.pricePerKm  = newPrice.toFixed(2);
-            console.log(`${this.personName} nustate nauja kilometro kaina - ${this.pricePerKm}Eur.`);
+            this.kmPrice  = newPrice * 100;
+            console.log(`${this.personName} nustate nauja kilometro kaina - ${(this.kmPrice / 100).toFixed(2)}Eur.`);
     }
 
     ride(distance) {
-        this.distance = distance;
-        this.price = (this.distance * this.kmPrice / 100).toFixed(2);
-        //console.log(this.price);
+        this.distance += distance;
+        this.priceTotal += distance * this.kmPrice;
     }
 
     stats() {
-            const drivePrice = this.distance * this.pricePerKm;
-            //console.log(drivePrice);
-            this.drivePrice = drivePrice.toFixed(2);
-            console.log(`${this.personName} nuvaziavo ${this.distance} km ir uzdirbo ${this.drivePrice} Eur.`);  
+            console.log(`${this.personName} nuvaziavo ${this.distance} km ir uzdirbo ${(this.priceTotal/ 100).toFixed(2)} Eur.`);  
     }
 }
 
