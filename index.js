@@ -35,18 +35,18 @@ stasys.stats();
 ona.stats();
 // Ona nuvaziavo 2 km ir uzdirbo 4.00 Eur.
 
-maryte.ride(13);
-stasys.ride(7);
-jonas.ride(4);
-ona.ride(15);
-jonas.ride(5);
-maryte.ride(3);
-stasys.ride(12);
-ona.ride(6);
-jonas.ride(4);
-maryte.ride(1);
-stasys.ride(9);
-ona.ride(10);
+maryte.ride(24);
+//stasys.ride(7);
+jonas.ride(18);
+ona.ride(33);
+//jonas.ride(5);
+//maryte.ride(3);
+stasys.ride(30);
+//ona.ride(6);
+//jonas.ride(4);
+//maryte.ride(1);
+//stasys.ride(9);
+//ona.ride(10);
 
 jonas.stats();
 // Jonas nuvaziavo 18 km ir uzdirbo 16.20 Eur.
@@ -64,14 +64,14 @@ ona.updatePrice(2.3);
 stasys.updatePrice(1.5);
 // Stasys nustate nauja kilometro kaina - 1.50 Eur.
 
-jonas.ride(5);
-maryte.ride(3);
-stasys.ride(12);
-ona.ride(6);
-jonas.ride(4);
-maryte.ride(1);
-stasys.ride(9);
-ona.ride(10);
+jonas.ride(27);
+maryte.ride(28);
+stasys.ride(51);
+ona.ride(33);
+//jonas.ride(4);
+//maryte.ride(1);
+//stasys.ride(9);
+//ona.ride(10);
 
 jonas.stats();
 // Jonas nuvaziavo 27 km ir uzdirbo 29.70 Eur.
